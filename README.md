@@ -10,9 +10,8 @@ Once above pieces of software are installed
   - # vagrant up 
   - # vagrant ssh acs ( ansible controller node ) 
 
-  ========= All the below commands will be executed in the vagrant vm named acs under /vagrant_data===========
-
-  # cd /vagrant_data This is the working directory for ansible since it holds all ansible configurations 
+ All the below commands will be executed in the vagrant vm named acs under /vagrant_data 
+ cd to /vagrant_data - This is the working directory for ansible since it holds all ansible configurations 
 
   - first step to check if ansible is installed # ansible --version
 
