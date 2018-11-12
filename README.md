@@ -7,8 +7,8 @@
 Once above pieces of software are installed 
 
 - clone the repository to install 3 vms ( one acts as ansible controller / two boxes are clients )
-  - # vagrant up 
-  - # vagrant ssh acs ( ansible controller node ) 
+  -  vagrant up 
+  -  vagrant ssh acs ( ansible controller node ) 
 
  All the below commands will be executed in the vagrant vm named acs under /vagrant_data 
  cd to /vagrant_data - This is the working directory for ansible since it holds all ansible configurations 
