@@ -4,11 +4,12 @@ pull the files and just do vagrant up to fire up  ansible control server (mgmt) 
 
 once boxes are up, login to mgmt box ( controller ), to run ansible commands
 
-1. for the first time, you need to provide the password to setup password less login
+1. aunthenicate the servers 
 
         * ssh-keyscan  mgmt lb web1 web2>>~vagrant/.ssh/known_hosts
 
-2. All the commands will be executed from /vagrant mount point in mgmt node
+2. All the commands will be executed from /vagrant mount point in mgmt node 
+   you may need to provide password for the firstime to setup ssh key and password less login
 
 	* ansible-playbook playbooks/ssh-key-playbook.yml -k ( **** password of vagrant )
 
