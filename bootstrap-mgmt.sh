@@ -26,3 +26,10 @@ cat >> /etc/hosts <<EOL
 #192.168.33.28  web8
 #192.168.33.29  web9
 EOL
+
+# exporting the hosts for authentication from hosts ( ansible inventory ) file 
+KEYSCAN=`cat /vagrant/hosts  | head -5  | grep -v "\["`
+
+
+
+
