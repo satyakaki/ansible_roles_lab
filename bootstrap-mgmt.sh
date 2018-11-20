@@ -28,8 +28,12 @@ cat >> /etc/hosts <<EOL
 EOL
 
 # exporting the hosts for authentication from hosts ( ansible inventory ) file 
-KEYSCAN=`cat /vagrant/hosts  | head -5  | grep -v "\["`
-
-
-
-
+cd /home/vagrant
+for i in `cat /vagrant/hosts  | head -5  | grep -v "\["`
+do
+	echo $i > /home/vagrant/hostfile 
+	sleep 2
+        ssh-keyscan $(cat /home/vagrant/hostfile) >>/home/vagrant/.ssh/known_hosts 
+done
+mv /home/vagrant/hostfile /tmp
+echo "SSHKEYSCAN IS MADE FOR THE SERVERS TO HAVE PASSWORD LESS LOGIN !!!"
