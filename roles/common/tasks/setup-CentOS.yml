@@ -1,11 +1,14 @@
 ---
-- name: Ensure basic packages are installed on RedHat distros
-  yum:
-    name: "{{list_of_packages}}"
-    state: present
 
 - name: Configure EPEL repo on Redhat distros
   yum_repository:
     name: epel
     description: EPEL YUM repo
     baseurl: https://download.fedoraproject.org/pub/epel/$releasever/$basearch/
+
+- name: Ensure basic packages are installed on RedHat distros
+  yum:
+    name: "{{list_of_packages}}"
+    state: present
+
+
