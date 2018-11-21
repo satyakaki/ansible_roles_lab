@@ -2,7 +2,7 @@
   hosts: fleet
   remote_user: vagrant
   become: True
-  gather_facts: True 
+  gather_facts: True
 
   roles:
-    - basic_pkg_install
+    - common
