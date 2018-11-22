@@ -11,4 +11,16 @@
     name: "{{list_of_packages}}"
     state: present
 
+- name: Disable selinux on the Redhat distros
+  selinux: state=disabled
+
+- name: Disable Firewall on Redhat distros
+  systemd: name=firewalld state=stopped
+  tags:
+   firewall
+
+- name: Copying MOTD file on RedHat distros
+  template: src=motd.j2 dest="/etc/motd"
+  tags:
+    motd
 

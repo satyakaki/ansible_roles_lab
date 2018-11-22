@@ -9,3 +9,13 @@
    name: "{{list_of_packages}}"
    state: present
    update_cache: yes
+
+- name: Disable Firewall on Ubuntu distros
+  service: name=ufw state=stopped
+  tags:
+   firewall
+
+- name: Copying MOTD file on Ubuntu distros
+  template: src=motd.j2 dest="/etc/motd"
+  tags:
+    motd
