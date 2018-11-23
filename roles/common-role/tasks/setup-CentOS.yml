@@ -5,20 +5,10 @@
     name: epel-release 
     state: present
 
-#- name: Configure EPEL repo on Redhat distros
-#  yum_repository:
-#    name: epel
-#    baseurl: https://download.fedoraproject.org/pub/epel/$releasever/$basearch/
-
 - name: Ensure basic packages are installed on RedHat distros
   yum:
     name: "{{list_of_packages}}"
     state: present
-
-- name: Disable Firewall on Redhat distros
-  systemd: name=firewalld state=stopped
-  tags:
-   firewall
 
 - name: Copying MOTD file on RedHat distros
   template: src=motd.j2 dest="/etc/motd"
