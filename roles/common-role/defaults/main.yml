@@ -3,7 +3,5 @@
 list_of_packages:
   - curl
   - wget
-  - openssl
   - vim
-  - emacs
-  - nano
+  - git

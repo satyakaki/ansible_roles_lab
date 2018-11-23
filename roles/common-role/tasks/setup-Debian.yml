@@ -1,5 +1,4 @@
 ---
-
 - name: dpkg configure
   shell: dpkg --configure -a
   changed_when: False
@@ -9,7 +8,7 @@
    name: "{{list_of_packages}}"
    state: present
    update_cache: yes
-
+   
 - name: Disable Firewall on Ubuntu distros
   service: name=ufw state=stopped
   tags:

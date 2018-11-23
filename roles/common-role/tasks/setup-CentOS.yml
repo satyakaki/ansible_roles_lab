@@ -1,18 +1,19 @@
 ---
 
-- name: Configure EPEL repo on Redhat distros
-  yum_repository:
-    name: epel
-    description: EPEL YUM repo
-    baseurl: https://download.fedoraproject.org/pub/epel/$releasever/$basearch/
+- name: Ensure EPEL is enabled on RedHat distros
+  yum: 
+    name: epel-release 
+    state: present
+
+#- name: Configure EPEL repo on Redhat distros
+#  yum_repository:
+#    name: epel
+#    baseurl: https://download.fedoraproject.org/pub/epel/$releasever/$basearch/
 
 - name: Ensure basic packages are installed on RedHat distros
   yum:
     name: "{{list_of_packages}}"
     state: present
-
-- name: Disable selinux on the Redhat distros
-  selinux: state=disabled
 
 - name: Disable Firewall on Redhat distros
   systemd: name=firewalld state=stopped
@@ -23,4 +24,3 @@
   template: src=motd.j2 dest="/etc/motd"
   tags:
     motd
-
