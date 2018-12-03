@@ -36,4 +36,4 @@ do
         ssh-keyscan $(cat /home/vagrant/hostfile) >>/home/vagrant/.ssh/known_hosts 
 done
 mv /home/vagrant/hostfile /tmp
-echo "SSHKEYSCAN IS MADE FOR THE SERVERS TO HAVE PASSWORD LESS LOGIN !!!"
+echo "SSHKEYSCAN IS MADE FOR THE SERVERS TO HAVE PASSWORD LESS LOGIN !!!!"
