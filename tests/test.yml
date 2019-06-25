@@ -3,4 +3,4 @@
   connection: local
   become: true
   roles :
-   - roles/common-role/
+   - ./roles/common-role/
