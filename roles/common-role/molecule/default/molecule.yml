@@ -1,4 +1,5 @@
 ---
+language: general
 dependency:
   name: galaxy
 driver:
