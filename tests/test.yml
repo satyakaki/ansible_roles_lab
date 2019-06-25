@@ -2,5 +2,5 @@
 - hosts: localhost
   connection: local
   become: true
-  roles:
-  - {role: ./roles/common}
+  roles :
+   - roles/common-role/
