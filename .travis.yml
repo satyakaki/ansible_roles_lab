@@ -1,10 +1,11 @@
 ---
 sudo: required
-# dist:  trusty
-env:
-  matrix:
-  - OS_TYPE=centos OS_VERSION=6
-  - OS_TYPE=centos OS_VERSION=7
+#dist:  trusty
+diskt: centos
+#env:
+#  matrix:
+#  - OS_TYPE=centos OS_VERSION=6
+#  - OS_TYPE=centos OS_VERSION=7
 
 language: python
 python: "2.7"
