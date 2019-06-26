@@ -1,5 +1,7 @@
 ## Ansible LAB
 
+[![Build Status](https://travis-ci.org/satyakaki/ansible_roles_lab.svg?branch=master)](https://travis-ci.org/satyakaki/ansible_roles_lab)
+
 pull the files and just do vagrant up to fire up  ansible control server (mgmt) and ansible clients (lb/web1/web2)
 
 once boxes are up, login to mgmt box ( controller ), to run ansible commands
