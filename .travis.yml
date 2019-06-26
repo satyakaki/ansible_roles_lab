@@ -1,7 +1,7 @@
 ---
 sudo: required
 #dist:  trusty
-dist: centos
+dist: xenial
 #env:
 #  matrix:
 #  - OS_TYPE=centos OS_VERSION=6
