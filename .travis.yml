@@ -1,6 +1,8 @@
 ---
 sudo: required
-dist: trusty
+dist: 
+   - trusty 
+   - centos
 
 language: python
 python: "2.7"
