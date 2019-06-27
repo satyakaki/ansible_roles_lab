@@ -7,8 +7,10 @@ pull the files and just do vagrant up to fire up  ansible control server (mgmt) 
 once boxes are up, login to mgmt box ( controller ), to run ansible commands
 
 1. aunthenicate the servers 
+   If ansible adhoc command does not work and fail with auth error try executing below 
+   command, to add ssh fingerprint to known_hosts in mgmt server
 
-        * ssh-keyscan  mgmt lb web1 web2>>~vagrant/.ssh/known_hosts
+ * ssh-keyscan  mgmt lb web1 web2>>~vagrant/.ssh/known_hosts
 
 2. All the commands will be executed from /vagrant mount point in mgmt node 
    you may need to provide password for the firstime to setup ssh key and password less login
