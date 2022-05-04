@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
     config.vm.define "web#{i}" do |node|
         node.vm.box = "bento/centos-7.4"
         node.vm.hostname = "web#{i}"
-        node.vm.network :private_network, ip: "192.168.33.2#{i}"
+        node.vm.network :private_network, ip: "192.168.56.10#{i}"
         node.vm.network "forwarded_port", guest: 80, host: "808#{i}"
         node.vm.provider "virtualbox" do |vb|
           vb.memory = "256"
@@ -25,7 +25,7 @@ Vagrant.configure("2") do |config|
   config.vm.define :lb do |lb_config|
       lb_config.vm.box = "ubuntu/trusty64"
       lb_config.vm.hostname = "lb"
-      lb_config.vm.network :private_network, ip: "192.168.33.151"
+      lb_config.vm.network :private_network, ip: "192.168.56.151"
       lb_config.vm.network "forwarded_port", guest: 80, host: 8080
       lb_config.vm.provider "virtualbox" do |vb|
         vb.memory = "256"
@@ -36,9 +36,9 @@ Vagrant.configure("2") do |config|
   config.vm.define :mgmt do |mgmt_config|
       mgmt_config.vm.box = "ubuntu/trusty64"
       mgmt_config.vm.hostname = "mgmt"
-      mgmt_config.vm.network :private_network, ip: "192.168.33.150"
+      mgmt_config.vm.network :private_network, ip: "192.168.56.152"
       mgmt_config.vm.provider "virtualbox" do |vb|
-        vb.memory = "256"
+        vb.memory = "1024"
       end
       mgmt_config.vm.provision :shell, path: "bootstrap-mgmt.sh"
   end
