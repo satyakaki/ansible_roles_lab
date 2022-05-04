@@ -25,14 +25,3 @@ cat > /etc/hosts <<EOL
 
 EOL
 
-# exporting the hosts for authentication from hosts ( ansible inventory ) file 
-cd /home/vagrant
-sudo chown -R vagrant:vagrant ~/.ssh
-cat /dev/null > ~/.ssh/known_hosts
-address=$(for i in `cat /vagrant/hosts  | head -5  | grep -v "\["`; do echo $i;done)
-
-ssh-keyscan -t rsa -T 10 $address >> ~/.ssh/known_hosts
-
-echo "SSHKEYSCAN IS MADE FOR THE SERVERS TO HAVE PASSWORD LESS LOGIN !!!!"
-
-
