@@ -5,3 +5,5 @@ list_of_packages:
   - wget
   - vim
   - git
+  - python-pip
+  - python
