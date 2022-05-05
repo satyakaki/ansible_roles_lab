@@ -1,0 +1,16 @@
+---
+- name: check service 
+  become: true
+  hosts: localhost
+
+  tasks:
+  - name: "get service facts"
+    service_facts:
+
+  - name: "See the service facts as they are which state"
+    debug: 
+      var: ansible_facts.services['cron']
+      state: running
+
+
+

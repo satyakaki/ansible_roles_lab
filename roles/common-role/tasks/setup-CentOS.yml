@@ -10,7 +10,12 @@
     name: "{{list_of_packages}}"
     state: present
 
-- name: Copying MOTD file on RedHat distros
+- name: Copying MOTD file on CentOS distros
   template: src=motd.j2 dest="/etc/motd"
   tags:
     motd
+
+- name: starting firewalld services in CentOS distros
+  service:
+    name=firewalld state=stopped enabled=false 
+
