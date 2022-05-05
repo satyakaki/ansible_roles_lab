@@ -1,4 +1,5 @@
 ---
+
 - name: dpkg configure
   shell: dpkg --configure -a
   changed_when: False

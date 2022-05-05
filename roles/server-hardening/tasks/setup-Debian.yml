@@ -1,6 +1,5 @@
 
 ---
-#5.1.1 Ensure cron daemon is enabled 
 
 - name: Install cron in Ubuntu Distros 
   apt:
@@ -12,8 +11,6 @@
     name: cron
     state: started
     enabled: yes
-
-# 5.1.2 Ensure permissions on /etc/crontab are configured 
 
 
 - name : Ensure SSH  daemon is enabled on ubuntu Distros
@@ -30,7 +27,7 @@
     group: root
     mode: '0600'    
 
-# 5.2 SSH Server Configuration
+# 5.2 SSH Server Configuration hardening
 
 - name: Ensure permissions on /etc/ssh/sshd_config are configured in CentOS Distros
   ansible.builtin.file:

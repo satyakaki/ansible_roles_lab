@@ -1,9 +1,9 @@
 - name: Playing various playbooks to setup infra using Ansible playbooks
-  hosts: fleet_names
+  hosts: fleet
   remote_user: vagrant
   become: True
-  gather_facts: True
+  gather_facts: false
 
   roles:
    - common-role
-   - server-hardening 
+   - server-hardening
