@@ -2,15 +2,14 @@
 
 - name: dpkg configure
   shell: dpkg --configure -a
-  changed_when: False
+  changed_when: false
 
 - name: Ensure basic packages are installed on Ubuntu Distros.
   apt:
    name: "{{list_of_packages}}"
    state: present
-   update_cache: no
-   
+   update_cache: true
 - name: Copying MOTD file on Ubuntu distros
   template: src=motd.j2 dest="/etc/motd"
   tags:
-    motd
+   motd

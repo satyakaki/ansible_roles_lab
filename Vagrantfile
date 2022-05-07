@@ -34,7 +34,7 @@ Vagrant.configure("2") do |config|
 
   # create mgmt node
   config.vm.define :mgmt do |mgmt_config|
-      mgmt_config.vm.box = "ubuntu/trusty64"
+      mgmt_config.vm.box = "ubuntu/bionic64"
       mgmt_config.vm.hostname = "mgmt"
       mgmt_config.vm.network :private_network, ip: "192.168.56.152"
       mgmt_config.vm.provider "virtualbox" do |vb|
