@@ -1,0 +1,24 @@
+---
+galaxy_info:
+  author: Satya Kaki
+  namespace: acme
+  description: common role to install basic softwares on ubuntu and centos
+  company: homecompany
+
+
+  license: MIT
+
+  min_ansible_version: 2.12
+
+  platforms:
+    - name: centos
+      versions:
+        - "7"
+    - name: ubuntu
+      versions:
+        - "20.04"
+
+
+  galaxy_tags: []
+
+dependencies: []

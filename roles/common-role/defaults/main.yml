@@ -1,9 +1,0 @@
----
-# defaults file for common
-list_of_packages:
-  - curl
-  - wget
-  - vim
-  - git
-  - python-pip
-  - python

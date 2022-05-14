@@ -5,4 +5,5 @@
   gather_facts: True
 
   roles:
-   - common-role
+   - common_role
+   - server_hardening
