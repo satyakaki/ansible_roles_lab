@@ -4,11 +4,11 @@
 192.168.56.151
 192.168.56.152
 
-[test]
-192.168.56.101
+#[test]
+#192.168.56.101
 
-[fleet_names]
-mgmt
-lb
-web1
-web2
+##[fleet_names]
+#mgmt
+#lb
+#web1
+#web2
